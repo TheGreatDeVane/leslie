@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leslie</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+
+	<!-- Optional theme -->
+	
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+	<div class="header">
+		<%= image_tag("logo.gif", :id =>"img", :alt => "Leslie Contraction Logo", :size => "249x115") %>
+		<nav class="flex">
+			<div class="active">
+				<%= link_to("Home", news_page_path) %>
+			</div>
+			<div class="nav">
+				<%= link_to("About Us", about_us_page_path) %>
+			</div>
+			<div class="nav">
+				<%= link_to("Client Sevices", client_services_page_path) %>
+			</div>
+			<div class="nav">
+				<%= link_to("Projects", projects_page_path) %>
+			</div>
+			<div class="nav">
+				<%= link_to("Employment", employment_page_path) %>
+			</div>
+			<div class="nav">
+				<%= link_to("Contact", contact_page_path) %>
+			</div>
+		</nav>
+	</div>
+
+<%= yield %>
+
+</body>
+</html>
